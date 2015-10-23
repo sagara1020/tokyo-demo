@@ -1,55 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
-	<name>test.kml</name>
-	<Style id="s_ylw-pushpin_hl0">
+	<name>kashiwa.kml</name>
+	<Schema name="schema1" id="schema1">
+		<SimpleField type="string" name="Description"></SimpleField>
+		<SimpleField type="string" name="pdfmaps_photos"><displayName>Photos</displayName>
+</SimpleField>
+		<SimpleField type="string" name="新規属性"></SimpleField>
+	</Schema>
+	<Style id="folder_style_0">
 		<IconStyle>
-			<color>ff1c2af4</color>
-			<scale>1.4</scale>
 			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+				<href>http://download.avenza.com/images/pdfmaps_icons/v2/pin-red-inground.png</href>
 			</Icon>
 		</IconStyle>
+		<LineStyle>
+			<color>ff0080ff</color>
+			<width>5</width>
+		</LineStyle>
 	</Style>
-	<StyleMap id="msn_ylw-pushpin">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#sn_ylw-pushpin</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#sh_ylw-pushpin</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Style id="s_ylw-pushpin_hl">
-		<IconStyle>
-			<color>ff1c2af4</color>
-			<scale>1.4</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
-			</Icon>
-		</IconStyle>
-	</Style>
-	<StyleMap id="m_ylw-pushpin">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#s_ylw-pushpin</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Style id="s_ylw-pushpin">
-		<IconStyle>
-			<color>ff1c2af4</color>
-			<scale>1.2</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
-			</Icon>
-		</IconStyle>
-	</Style>
-	<Style id="sn_ylw-pushpin">
+	<Style id="pdfmaps_style_red">
 		<IconStyle>
 			<scale>1.1</scale>
 			<Icon>
@@ -57,31 +27,20 @@
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
-		<LineStyle>
-			<color>ff0864ff</color>
-			<width>3</width>
-		</LineStyle>
+		<ListStyle>
+		</ListStyle>
 	</Style>
-	<Style id="s_ylw-pushpin0">
-		<IconStyle>
-			<color>ff1c2af4</color>
-			<scale>1.2</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
-			</Icon>
-		</IconStyle>
-	</Style>
-	<StyleMap id="m_ylw-pushpin0">
+	<StyleMap id="pdfmaps_style_red0">
 		<Pair>
 			<key>normal</key>
-			<styleUrl>#s_ylw-pushpin0</styleUrl>
+			<styleUrl>#pdfmaps_style_red</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+			<styleUrl>#pdfmaps_style_red1</styleUrl>
 		</Pair>
 	</StyleMap>
-	<Style id="sh_ylw-pushpin">
+	<Style id="pdfmaps_style_red1">
 		<IconStyle>
 			<scale>1.3</scale>
 			<Icon>
@@ -89,58 +48,60 @@
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
-		<LineStyle>
-			<color>ff0864ff</color>
-			<width>3</width>
-		</LineStyle>
+		<ListStyle>
+		</ListStyle>
 	</Style>
 	<Folder>
-		<name>test</name>
+		<name>kashiwa</name>
+		<open>1</open>
+		<styleUrl>#folder_style_0</styleUrl>
+		<ExtendedData>
+			<SchemaData schemaUrl="#schema1">
+			</SchemaData>
+		</ExtendedData>
 		<Placemark>
-			<name>tokyo_tower</name>
-			<description><![CDATA[東京タワー
-<img src="http://sagara1020.github.io/cesium-tokyo/IMG_0878.JPG"/>]]></description>
-			<LookAt>
-				<longitude>139.750129403496</longitude>
-				<latitude>35.65948463098161</latitude>
-				<altitude>0</altitude>
-				<heading>-0.004069538332168852</heading>
-				<tilt>42.44609317872325</tilt>
-				<range>1116.732195611573</range>
-				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
-			</LookAt>
-			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<name>銅像</name>
+			<TimeStamp><when>2015-10-23T05:44:28Z</when>
+</TimeStamp>
+			<styleUrl>#pdfmaps_style_red0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#schema1">
+					<SimpleData name="pdfmaps_photos"><![CDATA[<img src="http://sagara1020.github.io/tokyo-demo/pic/pic3.jpg"><br />]]></SimpleData>
+					<SimpleData name="Description">説明板が擦れているため詳細は不明。</SimpleData>
+				</SchemaData>
+			</ExtendedData>
 			<Point>
-				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>139.7456653523967,35.65810750848327,0</coordinates>
+				<coordinates>139.940010171018,35.8992107169233,0</coordinates>
 			</Point>
 		</Placemark>
 		<Placemark>
-			<name>Path</name>
-			<styleUrl>#msn_ylw-pushpin</styleUrl>
-			<LineString>
-				<tessellate>1</tessellate>
-				<coordinates>
-					139.7660263039523,35.6805565767712,0 139.7658513337764,35.67949048629353,0 139.765237190454,35.67771193102206,0 139.7634875921221,35.67792671446156,0 139.760911435799,35.67842947335366,0 139.7597237690391,35.67487070521787,0 139.7571849244519,35.67273775300104,0 139.755870054598,35.67010468207994,0 139.7549943699298,35.6682557830537,0 139.7535936299865,35.66541176529912,0 139.7528062497686,35.66342149004029,0 139.7516682752368,35.66121737825328,0 139.7510549056245,35.66000837398582,0 139.7504421157284,35.65951067224968,0 139.7493048163714,35.65972385913461,0 139.7482549176295,35.65972353712647,0 139.7474677955932,35.65943882478002,0 139.7470115898041,35.65841323883063,0 139.7461213253436,35.65881166759667,0 139.7459454545955,35.65871782866968,0 
-				</coordinates>
-			</LineString>
+			<name>柏飛行場跡地</name>
+			<TimeStamp><when>2015-10-23T05:39:26Z</when>
+</TimeStamp>
+			<styleUrl>#pdfmaps_style_red0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#schema1">
+					<SimpleData name="pdfmaps_photos"><![CDATA[<img src="http://sagara1020.github.io/tokyo-demo/pic/pic2.jpg"><br /><img src="http://sagara1020.github.io/tokyo-demo/pic/pic2_2.jpg"><br />]]></SimpleData>
+					<SimpleData name="Description">柏市は、戦時中「軍都柏」とよばれていた。</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>139.939080724904,35.9004869282795,0</coordinates>
+			</Point>
 		</Placemark>
 		<Placemark>
-			<name>tokyo_station</name>
-			<description>東京駅</description>
-			<LookAt>
-				<longitude>139.7660837958526</longitude>
-				<latitude>35.68138180372797</latitude>
-				<altitude>0</altitude>
-				<heading>-2.418773668596827e-09</heading>
-				<tilt>0</tilt>
-				<range>1000.000033212397</range>
-				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
-			</LookAt>
-			<styleUrl>#m_ylw-pushpin0</styleUrl>
+			<name>柏キャンパス</name>
+			<TimeStamp><when>2015-10-23T05:35:58Z</when>
+</TimeStamp>
+			<styleUrl>#pdfmaps_style_red0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#schema1">
+					<SimpleData name="pdfmaps_photos"><![CDATA[<img src="http://sagara1020.github.io/tokyo-demo/pic/pic1.jpg"><br />]]></SimpleData>
+					<SimpleData name="Description">キャンパス看板</SimpleData>
+				</SchemaData>
+			</ExtendedData>
 			<Point>
-				<gx:drawOrder>1</gx:drawOrder>
-				<coordinates>139.7660837955056,35.68122815005271,0</coordinates>
+				<coordinates>139.938984286012,35.9007593905101,0</coordinates>
 			</Point>
 		</Placemark>
 	</Folder>
