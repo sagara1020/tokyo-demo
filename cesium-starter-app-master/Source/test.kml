@@ -101,9 +101,9 @@
 		</ExtendedData>
 		<Placemark>
 			<name>税関研修センターの門</name>
-			<description><![CDATA[感想:コンクリート
-					<img src="http://sagara1020.github.io/tokyo-demo/pic/pc2.jpg"alt="pic1" width="260" height="360" />
-					]]ここは、財務省の研修施設</description>
+			<description>
+			<![CDATA[<img src="http://sagara1020.github.io/tokyo-demo/pic/pc2.jpg"alt="pic1" width="260" height="360" />
+					]]>ここは、財務省の研修施設</description>
 			<TimeStamp><when>2015-10-28T05:42:58Z</when>
 </TimeStamp>
 			<styleUrl>#pdfmaps_style_green1</styleUrl>
