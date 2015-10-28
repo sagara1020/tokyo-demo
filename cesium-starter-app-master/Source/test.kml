@@ -102,7 +102,7 @@
 		<Placemark>
 			<name>税関研修センターの門</name>
 			<description>hogehoge
-			<![CDATA[<img src="http://sagara1020.github.io/tokyo-demo/pic/pc2.jpg",alt="pic1" width="260" height="360">
+			<![CDATA[<img src="http://sagara1020.github.io/tokyo-demo/pic/pc2.jpg", alt="pic1", width="260", height="360">
 					]]></description>
 			<TimeStamp><when>2015-10-28T05:42:58Z</when>
 </TimeStamp>
