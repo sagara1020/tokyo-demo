@@ -474,7 +474,7 @@ imageryProvider: new Cesium.OpenStreetMapImageryProvider({
 url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
 credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
 }),
-baseLayerPicker: true
+baseLayerPicker: false
 });
 viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
