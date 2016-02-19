@@ -297,7 +297,7 @@ var czml = [
   },{
     "id" : "11",
     "name" : "Kさん",
-    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/kk.html'></iframe>",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/kk_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -444,7 +444,7 @@ var czml = [
     "name" : "Hさん",
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/hi_san.html'></iframe>",
     "billboard" : {
-      "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/h.png",
+      "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/h.PNG",
       "scale" : 0.2
     },
     "label" : {
