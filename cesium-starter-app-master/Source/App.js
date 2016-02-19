@@ -471,7 +471,7 @@ var czml = [
 ];
 var viewer = new Cesium.Viewer('cesiumContainer', {
 imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-url: 'http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg',
+url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
 credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
 }),
 baseLayerPicker: false
