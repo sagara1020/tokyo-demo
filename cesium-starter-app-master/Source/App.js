@@ -10,7 +10,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/k_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -39,7 +39,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/ma_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -68,7 +68,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/h_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -97,7 +97,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/f_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -126,7 +126,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/s_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -155,7 +155,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/m_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -184,7 +184,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/a_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/a.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -213,7 +213,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/t_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/t.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -242,7 +242,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/eki1.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -271,7 +271,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/eki2.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -300,7 +300,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/kk_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -329,7 +329,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/aa_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -358,7 +358,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/y_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/y.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -387,7 +387,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/n_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/n.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -416,7 +416,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/ff_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -445,7 +445,7 @@ var czml = [
     "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/hi_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/h.PNG",
-      "scale" : 0.2
+      "scale" : 0.3
     },
     "label" : {
       "fillColor" : {
@@ -475,4 +475,4 @@ viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
 viewer.camera.flyTo({   
-     destination : Cesium.Cartesian3.fromDegrees(135.1320894411087,35.28799163469748,8000)});
+     destination : Cesium.Cartesian3.fromDegrees(135.127802,35.301379,3000)});
