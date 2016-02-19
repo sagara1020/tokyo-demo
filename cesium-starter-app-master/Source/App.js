@@ -1,4 +1,3 @@
-var viewer = new Cesium.Viewer('cesiumContainer');
 var czml = [
   {
     "id" : "document",
@@ -30,7 +29,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1320894411087,35.28799163469748,30
+        135.1320894411087,35.28799163469748,70
       ]
     }
   },{
@@ -59,7 +58,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.130594,35.288045,30
+        135.130594,35.288045,70
       ]
     }
   },{
@@ -88,7 +87,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1297291543509,35.29059108578114,30
+        135.1297291543509,35.29059108578114,70
       ]
     }
   },{
@@ -117,7 +116,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1291249538861,35.29101553129239,30
+        135.1291249538861,35.29101553129239,70
       ]
     }
   },{
@@ -146,7 +145,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1306683058458,35.28645127024259,30
+        135.1306683058458,35.28645127024259,70
       ]
     }
   },{
@@ -175,7 +174,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1181093768303,35.29390321162933,30
+        135.1181093768303,35.29390321162933,70
       ]
     }
   },{
@@ -204,7 +203,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1194179846911,35.29378470577179,30
+        135.1194179846911,35.29378470577179,70
       ]
     }
   },{
@@ -233,7 +232,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1171880924785,35.29568045589838,30
+        135.1171880924785,35.29568045589838,70
       ]
     }
   },{
@@ -262,7 +261,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.118431462511,35.29605795858646,30
+        135.118431462511,35.29605795858646,70
       ]
     }
   },{
@@ -291,7 +290,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.118964,35.296067,30
+        135.118964,35.296067,70
       ]
     }
   },{
@@ -320,7 +319,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.129778,35.298046,30
+        135.129778,35.298046,70
       ]
     }
   },{
@@ -349,7 +348,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.131259,35.297258,30
+        135.131259,35.297258,70
       ]
     }
   },{
@@ -378,7 +377,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1119291148579,35.31039213781048,30
+        135.1119291148579,35.31039213781048,70
       ]
     }
   },{
@@ -407,7 +406,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1121741359157,35.31257401785641,30
+        135.1121741359157,35.31257401785641,70
       ]
     }
   },{
@@ -436,7 +435,7 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.111561,35.310111,30
+        135.111561,35.310111,70
       ]
     }
   },{
@@ -465,11 +464,18 @@ var czml = [
     },
     "position" : {
       "cartographicDegrees": [
-        135.1312113729885,35.29587344698348,30
+        135.1312113729885,35.29587344698348,70
       ]
     }
   }
 ];
+var viewer = new Cesium.Viewer('cesiumContainer', {
+imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
+credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+}),
+baseLayerPicker: true
+});
 viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
