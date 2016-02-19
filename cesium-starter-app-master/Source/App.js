@@ -94,7 +94,7 @@ var czml = [
   },{
     "id" : "4",
     "name" : "Fさん",
-    "description" : "<iframe src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/f_san.html'></iframe>",
+    "description" : "<iframe width='400px' height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/f_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
