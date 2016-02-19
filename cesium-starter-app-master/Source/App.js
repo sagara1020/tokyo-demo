@@ -7,7 +7,7 @@ var czml = [
   }, {
     "id" : "1",
     "name" : "Kさん",
-    "description" : "調査エリア学校周辺調査地区堀地区氏名Kさん性別女性居住年数生まれた時から７０〜８０年豪雨時の印象成美高校のあたりから雨がすごかった。経験したことがなかったので大変だった。どのように過ごされていたか家にいるしか出来なかった。浸水被害状況一宮神社の石のところまでギリギリ大変だったこと高見の見物",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/k_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -36,7 +36,7 @@ var czml = [
   },{
     "id" : "2",
     "name" : "Mさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/ma_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -65,7 +65,7 @@ var czml = [
   },{
     "id" : "3",
     "name" : "Hさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/h_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -123,7 +123,7 @@ var czml = [
   },{
     "id" : "5",
     "name" : "Sさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/s_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2

@@ -1,13 +1,13 @@
 body{width: 400px;
      height: 700px;
      float:left;
-
+     background-color: white;
 }
 
 #page{
    width: 400px;
    height: 700px;
-   background-color: #F1F8E0;
+   background-color: white;
 }
 h1{
   font-size: 20px;
