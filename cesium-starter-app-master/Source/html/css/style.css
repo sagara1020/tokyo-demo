@@ -1,0 +1,23 @@
+body{width: 400px;
+     height: 700px;
+     float:left;
+}
+
+h1{
+  font-size: 20px;
+  font-family:'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN';
+  width: 400px;
+  height:22px;
+  background-color:  blue;
+  font-weight: bold;
+}
+
+p{
+  font-size: 18px;
+  font-family:'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN';
+}
+
+img{
+  width: 400px;
+  height: 320px;
+}
