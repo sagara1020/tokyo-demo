@@ -152,7 +152,7 @@ var czml = [
   },{
     "id" : "6",
     "name" : "Mさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/m_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -181,7 +181,7 @@ var czml = [
   },{
     "id" : "7",
     "name" : "Aさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/a_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/a.png",
       "scale" : 0.2
@@ -210,7 +210,7 @@ var czml = [
   },{
     "id" : "8",
     "name" : "Tさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/t_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/t.png",
       "scale" : 0.2
@@ -239,7 +239,7 @@ var czml = [
   },{
     "id" : "9",
     "name" : "駅員さん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/eki1.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -268,7 +268,7 @@ var czml = [
   },{
     "id" : "10",
     "name" : "駅員さん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/eki2.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -297,7 +297,7 @@ var czml = [
   },{
     "id" : "11",
     "name" : "Kさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/kk.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -326,7 +326,7 @@ var czml = [
   },{
     "id" : "12",
     "name" : "Aさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/aa_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -353,9 +353,9 @@ var czml = [
       ]
     }
   },{
-    "id" : "12",
+    "id" : "13",
     "name" : "Yさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/y_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/y.png",
       "scale" : 0.2
@@ -382,9 +382,9 @@ var czml = [
       ]
     }
   },{
-    "id" : "13",
+    "id" : "14",
     "name" : "Nさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/n_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/n.png",
       "scale" : 0.2
@@ -411,9 +411,9 @@ var czml = [
       ]
     }
   },{
-    "id" : "14",
+    "id" : "15",
     "name" : "Fさん",
-    "description" : "test",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/ff_san.html'></iframe>",
     "billboard" : {
       "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/noimage.png",
       "scale" : 0.2
@@ -437,6 +437,35 @@ var czml = [
     "position" : {
       "cartographicDegrees": [
         135.111561,35.310111,30
+      ]
+    }
+  },{
+    "id" : "16",
+    "name" : "Hさん",
+    "description" : "<iframe width='450'px, height='700px', src = 'http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/html/hi_san.html'></iframe>",
+    "billboard" : {
+      "image" : "http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/img/h.png",
+      "scale" : 0.2
+    },
+    "label" : {
+      "fillColor" : {
+        "rgba" : [0, 0, 0, 255]
+      },
+      "font" : "12pt Lucida Console",
+      "horizontalOrigin" : "CENTER",
+      "outlineColor" : {
+        "rgba":[0, 0, 0, 255]
+      },
+      "outlineWidth" : 1.2,
+      "pixelOffset" : {
+        "cartesian2" : [0, 55]
+      },
+      "style" : "FILL_AND_OUTLINE",
+      "text" : ""
+    },
+    "position" : {
+      "cartographicDegrees": [
+        135.1312113729885,35.29587344698348,30
       ]
     }
   }
