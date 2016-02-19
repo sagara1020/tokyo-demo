@@ -1,15 +1,20 @@
 body{width: 400px;
      height: 700px;
      float:left;
-     background-color: white;
+
 }
 
+#page{
+   width: 400px;
+   height: 700px;
+   background-color: #F1F8E0;
+}
 h1{
   font-size: 20px;
   font-family:'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN';
   width: 400px;
   height:22px;
-  background-color:  blue;
+  background-color: #F7D358;
   font-weight: bold;
 }
 
