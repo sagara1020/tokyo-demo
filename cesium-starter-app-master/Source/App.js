@@ -1,6 +1,6 @@
 var viewer = new Cesium.Viewer('cesiumContainer',{
   imageryProvider:new Cesium.OpenStreetMapImageryProvider({
-  url: 'http://cyberjapandata.gsi.go.jp/xyz/ort/',
+  url: 'http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg',
   credit: new Cesium.Credit('地理院タイル:標準地図', '', 'http://maps.gsi.go.jp/development/ichiran.html')
 }),
   baseLayerPicker : false,  //デフォルトのレイヤ切り替えウィジェットをオフにする
