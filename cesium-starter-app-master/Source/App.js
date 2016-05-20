@@ -1,5 +1,9 @@
 var viewer = new Cesium.Viewer('cesiumContainer',{
-  baseLayerPicker : false,  //デフォルトのレイヤ切り替えウィジェットをオフにする
+  imageryProvider:new Cesium.OpenStreetMapImageryProvider({
+  url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
+  credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+}),
+  baseLayerPicker : true,  //デフォルトのレイヤ切り替えウィジェットをオフにする
   timeline : false,         //デフォルトのタイムラインウィジェットをオフにする
   animation : false         //デフォルトのアニメーションウィジェットをオフにする
 });
@@ -487,104 +491,3 @@ var czml = [
 viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
-
-// 各種レイヤーの透過度の初期設定
-var imageryLayers = viewer.imageryLayers;
-var viewModel = {
-    layers : [],
-    baseLayers : [],
-    upLayer : null,
-    downLayer : null,
-    selectedLayer : null,
-    isSelectableLayer : function(layer) {
-        return baseLayers.indexOf(layer) >= 0;
-    },
-    raise : function(layer, index) {
-        imageryLayers.raise(layer);
-        viewModel.upLayer = layer;
-        viewModel.downLayer = viewModel.layers[Math.max(0, index - 1)];
-        updateLayerList();
-        window.setTimeout(function() { viewModel.upLayer = viewModel.downLayer = null; }, 10);
-    },
-    lower : function(layer, index) {
-        imageryLayers.lower(layer);
-        viewModel.upLayer = viewModel.layers[Math.min(viewModel.layers.length - 1, index + 1)];
-        viewModel.downLayer = layer;
-        updateLayerList();
-        window.setTimeout(function() { viewModel.upLayer = viewModel.downLayer = null; }, 10);
-    },
-    canRaise : function(layerIndex) {
-        return layerIndex > 0;
-    },
-    canLower : function(layerIndex) {
-        return layerIndex >= 0 && layerIndex < imageryLayers.length - 1;
-    }
-};
-Cesium.knockout.track(viewModel);
-
-var baseLayers = viewModel.baseLayers;
-function setupLayers() {
-      addBaseLayerOption(
-      '地理院地図',
-            new Cesium.OpenStreetMapImageryProvider({
-                url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
-                credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
-            }));
-          }
-  function addBaseLayerOption(name, imageryProvider) {
-      var layer;
-      if (typeof imageryProvider === 'undefined') {
-          layer = imageryLayers.get(0);
-          viewModel.selectedLayer = layer;
-      } else {
-          layer = new Cesium.ImageryLayer(imageryProvider);
-      }
-
-      layer.name = name;
-      baseLayers.push(layer);
-  }
-
-
-  function addAdditionalLayerOption(name, imageryProvider, alpha, show) {
-      var layer = imageryLayers.addImageryProvider(imageryProvider);
-      layer.alpha = Cesium.defaultValue(alpha, 1);
-      layer.show = Cesium.defaultValue(show, true);
-      layer.name = name;
-      Cesium.knockout.track(layer, ['alpha', 'show', 'name']);
-  }
-
-  function updateLayerList() {
-      var numLayers = imageryLayers.length;
-      viewModel.layers.splice(0, viewModel.layers.length);
-      for (var i = numLayers - 1; i >= 0; --i) {
-          viewModel.layers.push(imageryLayers.get(i));
-      }
-  }
-
-  setupLayers();
-  updateLayerList();
-
-
-  //Bind the viewModel to the DOM elements of the UI that call for it.
-  var toolbar = document.getElementById('toolbar');
-  Cesium.knockout.applyBindings(viewModel, toolbar);
-
-  Cesium.knockout.getObservable(viewModel, 'selectedLayer').subscribe(function(baseLayer) {
-      // Handle changes to the drop-down base layer selector.
-      var activeLayerIndex = 0;
-      var numLayers = viewModel.layers.length;
-      for (var i = 0; i < numLayers; ++i) {
-          if (viewModel.isSelectableLayer(viewModel.layers[i])) {
-              activeLayerIndex = i;
-              break;
-          }
-      }
-      var activeLayer = viewModel.layers[activeLayerIndex];
-      var show = activeLayer.show;
-      var alpha = activeLayer.alpha;
-      imageryLayers.remove(activeLayer, false);
-      imageryLayers.add(baseLayer, numLayers - activeLayerIndex - 1);
-      baseLayer.show = show;
-      baseLayer.alpha = alpha;
-      updateLayerList();
-  });
