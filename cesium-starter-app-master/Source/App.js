@@ -4,6 +4,11 @@ var viewer = new Cesium.Viewer('cesiumContainer',{
   animation : false         //デフォルトのアニメーションウィジェットをオフにする
 });
 
+var terrainProvider = new Cesium.JapanGSITerrainProvider({
+  heightPower: 2.5 //高さの倍率の設定
+});
+viewer.terrainProvider = terrainProvider;
+
 var czml = [
   {
     "id" : "document",
@@ -481,5 +486,3 @@ viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/to
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
 viewer.camera.flyTo({   
  destination : Cesium.Cartesian3.fromDegrees(135.127802,35.301379,3000)});
-
- 
