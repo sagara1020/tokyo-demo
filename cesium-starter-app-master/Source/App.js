@@ -4,10 +4,7 @@ var viewer = new Cesium.Viewer('cesiumContainer',{
   animation : false         //デフォルトのアニメーションウィジェットをオフにする
 });
 
-var terrainProvider = new Cesium.JapanGSITerrainProvider({
-  heightPower: 2.5 //高さの倍率の設定
-});
-viewer.terrainProvider = terrainProvider;
+
 
 var czml = [
   {
