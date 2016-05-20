@@ -1,4 +1,14 @@
-var viewer = new Cesium.Viewer('cesiumContainer');
+var viewer = new Cesium.Viewer('cesiumContainer'),{
+  baseLayerPicker : false,  //デフォルトのレイヤ切り替えウィジェットをオフにする
+  timeline : false,         //デフォルトのタイムラインウィジェットをオフにする
+  animation : false         //デフォルトのアニメーションウィジェットをオフにする
+});
+
+var terrainProvider = new Cesium.JapanGSITerrainProvider({
+  heightPower: 2.5 //高さの倍率の設定
+});
+viewer.terrainProvider = terrainProvider;
+
 var czml = [
   {
     "id" : "document",
@@ -475,4 +485,29 @@ viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
 viewer.camera.flyTo({   
-     destination : Cesium.Cartesian3.fromDegrees(135.127802,35.301379,3000)});
+ destination : Cesium.Cartesian3.fromDegrees(135.127802,35.301379,3000)});
+
+ var baseLayers = viewModel.baseLayers;
+ function setupLayers() {
+     // Create all the base layers that this example will support.
+     // These base layers aren't really special.  It's possible to have multiple of them
+     // enabled at once, just like the other layers, but it doesn't make much sense because
+     // all of these layers cover the entire globe and are opaque.
+     addBaseLayerOption(
+             'Bing Maps Aerial',
+             undefined); // the current base layer
+     // Create the additional layers
+     addBaseLayerOption(
+       '地理院地図',
+             new Cesium.OpenStreetMapImageryProvider({
+                 url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
+                 credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+             }));
+     // Create the additional layers
+     addBaseLayerOption(
+       '電子国土基本図（オルソ画像）',
+       new Cesium.OpenStreetMapImageryProvider({
+         url: 'http://cyberjapandata.gsi.go.jp/xyz/ort/',
+         credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
+       }));
+    }
