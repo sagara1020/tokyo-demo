@@ -531,3 +531,60 @@ function setupLayers() {
                 credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
             }));
           }
+  function addBaseLayerOption(name, imageryProvider) {
+      var layer;
+      if (typeof imageryProvider === 'undefined') {
+          layer = imageryLayers.get(0);
+          viewModel.selectedLayer = layer;
+      } else {
+          layer = new Cesium.ImageryLayer(imageryProvider);
+      }
+
+      layer.name = name;
+      baseLayers.push(layer);
+  }
+
+
+  function addAdditionalLayerOption(name, imageryProvider, alpha, show) {
+      var layer = imageryLayers.addImageryProvider(imageryProvider);
+      layer.alpha = Cesium.defaultValue(alpha, 1);
+      layer.show = Cesium.defaultValue(show, true);
+      layer.name = name;
+      Cesium.knockout.track(layer, ['alpha', 'show', 'name']);
+  }
+
+  function updateLayerList() {
+      var numLayers = imageryLayers.length;
+      viewModel.layers.splice(0, viewModel.layers.length);
+      for (var i = numLayers - 1; i >= 0; --i) {
+          viewModel.layers.push(imageryLayers.get(i));
+      }
+  }
+
+  setupLayers();
+  updateLayerList();
+
+
+  //Bind the viewModel to the DOM elements of the UI that call for it.
+  var toolbar = document.getElementById('toolbar');
+  Cesium.knockout.applyBindings(viewModel, toolbar);
+
+  Cesium.knockout.getObservable(viewModel, 'selectedLayer').subscribe(function(baseLayer) {
+      // Handle changes to the drop-down base layer selector.
+      var activeLayerIndex = 0;
+      var numLayers = viewModel.layers.length;
+      for (var i = 0; i < numLayers; ++i) {
+          if (viewModel.isSelectableLayer(viewModel.layers[i])) {
+              activeLayerIndex = i;
+              break;
+          }
+      }
+      var activeLayer = viewModel.layers[activeLayerIndex];
+      var show = activeLayer.show;
+      var alpha = activeLayer.alpha;
+      imageryLayers.remove(activeLayer, false);
+      imageryLayers.add(baseLayer, numLayers - activeLayerIndex - 1);
+      baseLayer.show = show;
+      baseLayer.alpha = alpha;
+      updateLayerList();
+  });
