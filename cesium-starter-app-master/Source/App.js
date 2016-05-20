@@ -482,13 +482,3 @@ var czml = [
 viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
-
-var baseLayers = viewModel.baseLayers;
-function setupLayers() {
-    // Create the additional layers
-    addBaseLayerOption(
-      '地理院地図',
-            new Cesium.OpenStreetMapImageryProvider({
-                url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
-                credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
-            }));
