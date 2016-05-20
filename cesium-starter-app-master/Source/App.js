@@ -488,6 +488,40 @@ viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
 
+// 各種レイヤーの透過度の初期設定
+var imageryLayers = viewer.imageryLayers;
+var viewModel = {
+    layers : [],
+    baseLayers : [],
+    upLayer : null,
+    downLayer : null,
+    selectedLayer : null,
+    isSelectableLayer : function(layer) {
+        return baseLayers.indexOf(layer) >= 0;
+    },
+    raise : function(layer, index) {
+        imageryLayers.raise(layer);
+        viewModel.upLayer = layer;
+        viewModel.downLayer = viewModel.layers[Math.max(0, index - 1)];
+        updateLayerList();
+        window.setTimeout(function() { viewModel.upLayer = viewModel.downLayer = null; }, 10);
+    },
+    lower : function(layer, index) {
+        imageryLayers.lower(layer);
+        viewModel.upLayer = viewModel.layers[Math.min(viewModel.layers.length - 1, index + 1)];
+        viewModel.downLayer = layer;
+        updateLayerList();
+        window.setTimeout(function() { viewModel.upLayer = viewModel.downLayer = null; }, 10);
+    },
+    canRaise : function(layerIndex) {
+        return layerIndex > 0;
+    },
+    canLower : function(layerIndex) {
+        return layerIndex >= 0 && layerIndex < imageryLayers.length - 1;
+    }
+};
+Cesium.knockout.track(viewModel);
+
 var baseLayers = viewModel.baseLayers;
 function setupLayers() {
       addBaseLayerOption(
