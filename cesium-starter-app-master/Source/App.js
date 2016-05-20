@@ -5,7 +5,7 @@ var viewer = new Cesium.Viewer('cesiumContainer',{
 });
 
 var terrainProvider = new Cesium.JapanGSITerrainProvider({
-  heightPower: 2.5 //高さの倍率の設定
+  heightPower: 1.0 //高さの倍率の設定
 });
 viewer.terrainProvider = terrainProvider;
 
