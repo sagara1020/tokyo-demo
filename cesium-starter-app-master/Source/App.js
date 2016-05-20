@@ -4,10 +4,14 @@ var viewer = new Cesium.Viewer('cesiumContainer',{
   animation : false         //デフォルトのアニメーションウィジェットをオフにする
 });
 
-var terrainProvider = new Cesium.JapanGSITerrainProvider({
-  heightPower: 2.5 //高さの倍率の設定
+viewer.camera.setView({
+  destination: Cesium.Cartesian3.fromDegrees(135.127802,35.301379,3000),
+  orientation: {
+    heading: 0, // 水平方向の回転
+    pitch: -Cesium.Math.PI_OVER_TWO, // 垂直方向の回転 上を見上げたり下を見下ろしたり
+    roll: 0
+  }
 });
-viewer.terrainProvider = terrainProvider;
 
 var czml = [
   {
@@ -484,5 +488,3 @@ var czml = [
 viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/water_area.kml'));
 viewer.dataSources.add(Cesium.KmlDataSource.load('http://sagara1020.github.io/tokyo-demo/cesium-starter-app-master/Source/refuge.kmz'));
-viewer.camera.flyTo({   
- destination : Cesium.Cartesian3.fromDegrees(135.127802,35.301379,3000)});
