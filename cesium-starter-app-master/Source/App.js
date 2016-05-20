@@ -3,7 +3,7 @@ var viewer = new Cesium.Viewer('cesiumContainer',{
   url: 'http://cyberjapandata.gsi.go.jp/xyz/std/',
   credit: new Cesium.Credit('地理院タイル', '', 'http://maps.gsi.go.jp/development/ichiran.html')
 }),
-  baseLayerPicker : true,  //デフォルトのレイヤ切り替えウィジェットをオフにする
+  baseLayerPicker : false,  //デフォルトのレイヤ切り替えウィジェットをオフにする
   timeline : false,         //デフォルトのタイムラインウィジェットをオフにする
   animation : false         //デフォルトのアニメーションウィジェットをオフにする
 });
